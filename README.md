@@ -30,7 +30,7 @@ Follow the instructions below to set up and run the project locally:
 
 ### Setup
 1. **Clone this repository**
-   git clone https://github.com/<your-username>/HouseVal.git
+   git clone https://github.com/omlanfz/HouseVal.git
 
 2. **Navigate to the project directory**
    cd HouseVal
