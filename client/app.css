@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Sets the height of the viewport and applies the font globally */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+/* Styles for the blurred background image */
+.img {
+  background: url('https://wallpapercave.com/wp/wp2752761.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(4px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensures the background is behind other elements */
+}
+
+/* Styling for the form container */
+.form {
+  max-width: 300px; /* Limits the width of the form */
+  margin: 50px auto; /* Centers the form vertically and horizontally */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+}
+
+/* Heading styles */
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #f5f5f5; /* Light gray text for better contrast */
+}
+
+/* General input and button styles */
+.area, .location, .submit, .result {
+  width: calc(100% - 20px); /* Ensures consistent padding inside the form */
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for text inputs and dropdowns */
+.area, .location {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  color: #333; /* Dark text for readability */
+}
+
+/* Button styles */
+.submit {
+  background: #4CAF50; /* Green background for the button */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.submit:hover {
+  background: #45a049; /* Slightly darker green on hover */
+}
+
+/* Result display styles */
+.result {
+  background: rgba(255, 223, 186, 0.8); /* Light beige background */
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Toggle button container styles */
+.switch-field {
+  display: flex;
+  justify-content: space-between; /* Distributes buttons evenly */
+  margin-bottom: 20px;
+}
+
+/* Hidden input styles to hide the radio buttons */
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+/* Label styles for toggle buttons */
+.switch-field label {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  color: #333;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Subtle border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Styles for selected toggle button */
+.switch-field input:checked + label {
+  background-color: #4CAF50; /* Green background for selected state */
+  color: white;
+}
+
+/* Rounded corners for the first and last labels */
+.switch-field label:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
