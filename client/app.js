@@ -1,5 +1,6 @@
 // Use environment variable for API URL or fallback to localhost for development
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:5000";
+const API_BASE_URL =
+  process.env.REACT_APP_API_URL || "https://house-val-sooty.vercel.app/";
 
 function getBathValue() {
   const uiBathrooms = document.getElementsByName("uiBathrooms");
