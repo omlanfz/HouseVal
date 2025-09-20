@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import util
 import os
@@ -8,6 +8,18 @@ CORS(app)
 
 # Ensure artifacts are loaded at the start
 util.load_saved_artifacts()
+
+# Add this root route
+@app.route('/')
+def home():
+    return jsonify({
+        'message': 'HouseVal API is running!',
+        'endpoints': {
+            'get_locations': '/get_location_names',
+            'predict_price': '/predict_home_price'
+        },
+        'status': 'active'
+    })
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
