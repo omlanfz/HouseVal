@@ -1,5 +1,234 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>HouseVal</title>
+    <link rel="icon" type="image/svg+xml" href="/house.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .form-container {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      input[type="radio"]:checked + label {
+        background-color: #4caf50 !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-4"
+  >
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <div
+        class="h-full w-full bg-[url('https://wallpapercave.com/wp/wp2752761.jpg')] bg-cover bg-center animate-pulse-slow"
+      ></div>
+    </div>
+
+    <div
+      class="relative z-10 w-full max-w-md mx-auto p-8 rounded-2xl shadow-2xl form-container transition-all duration-300 transform hover:scale-105"
+    >
+      <h1 class="text-4xl font-bold text-center mb-6 text-white tracking-wide">
+        HouseVal
+      </h1>
+
+      <form class="space-y-6">
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Area (Square Feet)</h2>
+          <input
+            type="text"
+            id="uiSqft"
+            name="Squareft"
+            value="1000"
+            class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
+          />
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Bedroom</h2>
+          <div class="flex justify-between space-x-2">
+            <input
+              type="radio"
+              id="radio-bhk-1"
+              name="uiBHK"
+              value="1"
+              class="hidden"
+            />
+            <label
+              for="radio-bhk-1"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >1</label
+            >
+            <input
+              type="radio"
+              id="radio-bhk-2"
+              name="uiBHK"
+              value="2"
+              checked
+              class="hidden"
+            />
+            <label
+              for="radio-bhk-2"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >2</label
+            >
+            <input
+              type="radio"
+              id="radio-bhk-3"
+              name="uiBHK"
+              value="3"
+              class="hidden"
+            />
+            <label
+              for="radio-bhk-3"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >3</label
+            >
+            <input
+              type="radio"
+              id="radio-bhk-4"
+              name="uiBHK"
+              value="4"
+              class="hidden"
+            />
+            <label
+              for="radio-bhk-4"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >4</label
+            >
+            <input
+              type="radio"
+              id="radio-bhk-5"
+              name="uiBHK"
+              value="5"
+              class="hidden"
+            />
+            <label
+              for="radio-bhk-5"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >5</label
+            >
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Bath</h2>
+          <div class="flex justify-between space-x-2">
+            <input
+              type="radio"
+              id="radio-bath-1"
+              name="uiBathrooms"
+              value="1"
+              class="hidden"
+            />
+            <label
+              for="radio-bath-1"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >1</label
+            >
+            <input
+              type="radio"
+              id="radio-bath-2"
+              name="uiBathrooms"
+              value="2"
+              checked
+              class="hidden"
+            />
+            <label
+              for="radio-bath-2"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >2</label
+            >
+            <input
+              type="radio"
+              id="radio-bath-3"
+              name="uiBathrooms"
+              value="3"
+              class="hidden"
+            />
+            <label
+              for="radio-bath-3"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >3</label
+            >
+            <input
+              type="radio"
+              id="radio-bath-4"
+              name="uiBathrooms"
+              value="4"
+              class="hidden"
+            />
+            <label
+              for="radio-bath-4"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >4</label
+            >
+            <input
+              type="radio"
+              id="radio-bath-5"
+              name="uiBathrooms"
+              value="5"
+              class="hidden"
+            />
+            <label
+              for="radio-bath-5"
+              class="flex-1 text-center py-2 px-4 rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600 transition-colors"
+              >5</label
+            >
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Location</h2>
+          <select
+            id="uiLocations"
+            class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
+          >
+            <option value="" disabled selected>Choose a Location</option>
+          </select>
+        </div>
+
+        <button
+          type="button"
+          onclick="onClickedEstimatePrice()"
+          class="w-full py-3 mt-4 text-lg font-bold rounded-lg bg-green-600 hover:bg-green-700 text-white transition-colors transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+        >
+          Estimate Price
+        </button>
+
+        <div id="uiEstimatedPrice" class="w-full mt-6 text-center">
+          <h2
+            class="text-2xl font-bold p-4 bg-yellow-400 text-gray-900 rounded-lg shadow-inner"
+          ></h2>
+        </div>
+      </form>
+    </div>
+
+    <!-- Add this loading indicator to your index.html -->
+    <div
+      id="loadingOverlay"
+      class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-gray-800 p-6 rounded-lg text-center">
+        <div
+          class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"
+        ></div>
+        <p class="text-white">Waking up backend server...</p>
+        <p class="text-gray-400 text-sm mt-2">
+          This may take up to 30 seconds on first load
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
 <head>
     <title>HouseVal</title>
     <link rel="icon" type="image/svg+xml" href="/house.png" />
@@ -86,4 +315,4 @@
     </div>
 
 </body>
-</html>
+</html> -->
